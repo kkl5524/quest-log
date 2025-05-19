@@ -1,0 +1,374 @@
+@font-face {
+    font-family: "Silkscreen";
+    src: url("Silkscreen/Silkscreen-Regular.ttf");
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Silkscreen";
+    box-sizing: border-box;
+}
+img{
+    image-rendering: pixelated;
+}
+.container{
+    overflow: hidden;
+    margin: auto;
+}
+.background-image{
+    background-image: url("images/fall background.png");
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    position: absolute;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    image-rendering: pixelated;
+}
+
+/* setting up buttons */
+.button-row{
+    max-width: 85vw;
+    max-height: 10vh;
+    margin-top: 40px;
+    margin-bottom: 5px;
+    margin-right: 20%;
+    resize: both;
+    display: flex;
+    align-content: center;
+    pointer-events: auto;
+}
+.spring-button{
+    background-image: url("images/unclicked spring button.png");
+    height: 40px;
+    width: 40px;  
+    background-size: cover;
+    margin-left: auto;
+    cursor: pointer;
+    image-rendering: pixelated;
+}
+.summer-button{
+    background-image: url("images/unclicked summer button.png");
+    height: 40px;
+    width: 40px; 
+    background-size: cover;
+    margin-left: 15px;
+    cursor: pointer;
+    image-rendering: pixelated;
+}
+.fall-button{
+    background-image: url("images/clicked fall button.png");
+    height: 40px;
+    width: 40px;  
+    background-size: cover;  
+    margin-left: 15px;
+    cursor: pointer;
+    image-rendering: pixelated;
+}
+.winter-button{
+    background-image: url("images/unclicked winter button.png");
+    height: 40px;
+    width: 40px;  
+    background-size: cover;  
+    margin-left: 15px;
+    margin-right: 50px;
+    cursor: pointer;
+    image-rendering: pixelated;
+}
+
+/* main panel */
+.todo-panel::before {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-top: 65%;
+}
+.todo-panel{
+    background-image: url("images/panel.png");
+    width: 85%;
+    max-width: 900px;
+    min-width: 500px;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    position: relative;
+}
+.todo-panel-wrapper{
+    width: 88%;
+    height: 85%;
+    margin: auto;
+    position: absolute;
+    top: 7%;
+    left: 6%;
+    display: flex;
+}
+.left-column{
+    width: 30%;
+    flex-direction: column;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    padding-right: 1%;
+    align-items: center;
+    position: relative;
+
+}
+.right-column{
+    width: 70%;
+    flex-direction: column;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1%;
+}
+
+/* inner containers and panels */
+/* left column */
+.left-column h2 {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+}
+#quest-log {
+    width: 90%;
+}
+.progress-container::before {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-top: 65%;
+}
+.progress-container {
+    background-image: url("images/progress panel.png");
+    margin-top: 3%;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    position: relative;
+    width: 95%;
+    height: 64.5%;
+    align-items: center;
+}
+.reward-container {
+    background-image: url("images/reward panel.png");
+    width: 86.4%;
+    height: 68%;
+    margin: auto;
+    position: absolute;
+    top: 4.7%;
+    left: 6.9%;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    position: absolute;
+}
+.reward-image{
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 87.5%;
+    width: 87.5%;
+    top: 5%;
+    left: 6%;
+    position: absolute;
+}
+.progress{
+    background-image: url("images/progress bar start.png");
+    image-rendering: pixelated;
+    width: 86.4%;
+    height: 19%;
+    margin: auto;
+    position: absolute;
+    top: 74.3%;
+    left: 6.9%;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+}
+.progress-bar{
+    height: 66.672%;
+    width: 0%;
+    max-width: 95px;
+    background-color: #5f5178;
+    align-items: center;
+    margin-left: 13.3%;
+    margin-top: 5.5%;
+}
+#numbers{
+    margin-top: 3%;
+    background-color: white;
+    border: solid 3px #3b1800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3b1800;
+    height: 8.5%;
+    font-size: 2vw;
+    padding: 1.5%;
+}
+/* right column */
+
+.book-panel::before {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-top: 65%;
+}
+.book-panel {
+    background-image: url("images/book panel.png");
+    margin-top: 1.5%;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    position: relative;
+    width: 98.5%;
+    height: 97%;
+    align-items: center;
+}
+.book-display {
+    background-image: url("images/book display.png");
+    width: 75.9%;
+    height: 93%;
+    margin: auto;
+    position: absolute;
+    top: 3.6%;
+    left: 21.1%;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    position: absolute;
+}
+.todo-container {
+    width: 93%;
+    height: 94%;
+    margin: auto;
+    position: absolute;
+    top: 2.8%;
+    left: 3.5%;
+    pointer-events: auto;
+}
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    resize: both;
+    position: relative;
+    z-index: 10;
+}
+input {
+    flex: 1;
+    border: solid 3px #3b1800;
+    outline: none;
+    background: white;
+    padding: 1.5%;
+    width: 50%;
+    font-size: 16px;
+}
+#add-button{
+    border: none;
+    outline: none;
+    margin-left: 2%;
+    padding:2.5% 9%;
+    color: #3b1800;
+    font-size: 16px;
+    cursor: pointer;
+    resize: both;
+    background-image: url("images/button.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #fff7ed;
+}
+.list-container {
+    width: 100%;
+    height: 87%;
+    margin: auto;
+    top: 13%;
+    left: 0%;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    position: absolute;
+    overflow-y: scroll;
+}
+ul li{
+    list-style: none;
+    font-size: 16px;
+    padding: 10px 8px 10px 45px;
+    padding-right: 20px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    overflow-wrap: break-word;
+}
+ul li::before{
+    content: " ";
+    position: absolute;
+    height: 60%;
+    width: 8%;
+    background-image: url(images/unchecked.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 10px;
+    left: 8px;
+}
+ul li.checked{
+    color:#c2aea5;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(images/checked.png);
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 7px;
+    width: 30px;
+    height: 30px;
+    font-size: 2.2vw;
+    color: #555;
+    line-height: 30px;
+    text-align: center;
+}
+ul li span:hover{
+    background: #f0e3d3;
+}
+
+/* file upload row */
+.file-row {
+    pointer-events: auto;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;    
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 5%;
+}
+.upload-file{
+    display: none;
+}
+.upload-label{
+    display: inline-flex;
+    flex: 0 0 auto;
+    border: solid 3px #3b1800;
+    outline: none;
+    background: white;
+    padding: 1%;
+    margin-right: 2%;
+    justify-content: center;
+    cursor: pointer;
+}
+.upload-label:hover{
+    background: #fff7ed;
+}
+.file-name{
+    font-size: 16px;
+    color: #3b1800;
+}

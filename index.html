@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Quest Log</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" href="images/favicon.png" type="#">
+</head>
+<body>
+	<div class="container">
+		<div class="background-image" id="background-image">
+			<div class="button-row">
+				<div class="spring-button" id="spring-button"></div>
+				<div class="summer-button" id="summer-button"></div>
+				<div class="fall-button" id="fall-button"></div>
+				<div class="winter-button" id="winter-button"></div>
+			</div>
+			<div class="todo-panel">
+				<div class="todo-panel-wrapper">
+					<div class="left-column">
+						<h2><img src="images/quest log.png" id="quest-log"></h2>
+						<div class="progress-container">
+							<div class="reward-container">
+								<div class="reward-image" id="reward-image"></div>
+							</div>
+							<div class="progress" id="progress">
+								<div class="progress-bar" id="progress-bar">
+								</div>
+							</div>
+						</div>
+						<p id="numbers">
+							<span id="first-number"></span>/<span id="second-number"></span>
+						</p>
+					</div>
+					<div class="right-column">
+						<div class="book-panel">
+							<div class="book-display">
+								<div class="todo-container">
+									<div class="input-container">
+										<input type="text" id="input-box" placeholder="Add a task...">
+										<button id="add-button" onclick="addTask()">Add</button>
+									</div>
+									<div class="list-container">
+										<ul id="unchecked-list-container"></ul>
+										<ul id="checked-list-container"></ul>
+									</div>	
+								</div>
+							</div>
+						</div>					
+					</div>
+				</div>
+			</div>
+			<div class="file-row">
+				<label for="upload-file" class="upload-label" id="upload-label">Choose Reward</label>
+				<span id="file-name" class="file-name">No file chosen</span>
+				<input id= "upload-file" class="upload-file" type="file" accept="image/*">
+			</div>
+		</div>
+	</div>
+<script src="script.js"></script>
+</body>
+</html>
